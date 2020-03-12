@@ -26,7 +26,7 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "device_detector", "~> 1.0.3"
-  spec.add_dependency "dry-configurable", "~> 0.11.2"
-  spec.add_dependency "rake", "~> 12.0"
+  spec.add_dependency "device_detector"
+  spec.add_dependency "dry-configurable"
+  spec.add_dependency "rake"
 end
