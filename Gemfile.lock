@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    device_detector_regexes (0.1.1)
+    device_detector_regexes (0.1.2)
       device_detector
       dry-configurable
       rake
