@@ -27,6 +27,4 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "device_detector"
-  spec.add_dependency "dry-configurable"
-  spec.add_dependency "rake"
 end

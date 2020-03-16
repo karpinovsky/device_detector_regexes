@@ -21,32 +21,27 @@ Or install it yourself as:
 
 ## Usage
 
-Specify the folder that will contain the mapped device_detector [regexes folder](https://github.com/podigee/device_detector/tree/develop/regexes)
-
-```bash
-rake map_into\["my_folder_name"\]
-```
-
-Somewhere in your code
+Map device_detector [regexes folder](https://github.com/podigee/device_detector/tree/develop/regexes) into your custom folder
 
 ```ruby
-DeviceDetectorRegexes.config.dir = "path/to/my/folder/name"
+DeviceDetector.configure do |config|
+  config.dir = "path/to/your/custom/folder"
+end
 ```
 
-Voila! Just add new regexes to the appropriate file
+Add new regexes to the appropriate file
 
 ```yaml
-# my_folder_name/regexes/client/mobile_apps.yml
+# your/custom/folder/regexes/client/mobile_apps.yml
 
 # [] # leave an empty array here if the file is empty
-- regex: 'Foo(?:[ /]([\d\.]+))?'
+- regex: 'Foo(?:[ /]([\d\.]+))'
   name: 'Bar'
   version: '$1'
+  prefix: false # do not append piwik dd prefix
 ```
 
 ```ruby
-# bin/console
-
 client = DeviceDetector.new("Foo/2.1.2; Android: 9; Model:PAR-LX1; okhttp/3.12.8")
 client.name         # => "Bar"
 client.full_version # => "2.1.2"
