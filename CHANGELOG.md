@@ -1,5 +1,8 @@
 # Change log
 
+## [0.1.5]
+Add rubocop, fix offences
+
 ## [0.1.4]
 Add an abillity to skip the piwik dd prefix, refactoring
 
