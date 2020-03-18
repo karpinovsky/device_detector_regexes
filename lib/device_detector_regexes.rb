@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'pathname'
 require 'device_detector'
 
 module DeviceDetectorRegexes; end
@@ -18,6 +19,8 @@ class DeviceDetector
   end
 
   class Parser
+    private
+
     def filepaths
       filenames.each_with_object([]) do |filename, filenames|
         # push custom files first due to higher precedence lookup than default files

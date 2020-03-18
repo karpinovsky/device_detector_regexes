@@ -1,0 +1,6 @@
+# [] # leave an empty array here if the file is empty
+
+- regex: '[a-zA-z]+/[\d\.]+;\s(?:([a-zA-z]+)):\s(?:([\d\.?]+))'
+  name: '$1'
+  version: '$2'
+  prefix: false

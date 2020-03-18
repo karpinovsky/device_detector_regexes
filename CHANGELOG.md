@@ -1,6 +1,9 @@
 # Change log
 
 ## [0.1.5]
+Add tests
+
+## [0.1.5]
 Add rubocop, fix offences
 
 ## [0.1.4]
